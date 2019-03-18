@@ -21,6 +21,14 @@ class toll_plaza
         return $result;
         toll_plaza::disconnect();
     }
+    public function select_id()
+    {
+        $cnn=toll_plaza::connect();
+        $q="select toll_plaza_id from toll_plaza";
+        $result=$cnn->query($q);
+        return $result;
+        toll_plaza::disconnect();
+    }
   
   public function insert($_Tname,$_lat,$_long,$_hn,$_en)
        {

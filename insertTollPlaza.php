@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <script src="../GpsToll_PhpInterFace/Shared/js/jquery-3.2.1.min.js"></script>
+    <script src="../Phpinterface_Toll/Shared/js/jquery-3.2.1.min.js"></script>
         <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="../GpsToll_PhpInterFace/Shared/css/bootstrap.min.css" >
+<link rel="stylesheet" href="../Phpinterface_Toll/Shared/css/bootstrap.min.css" >
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="../GpsToll_PhpInterFace/Shared/css/bootstrap-theme.min.css" >
+<link rel="stylesheet" href="../Phpinterface_Toll/Shared/css/bootstrap-theme.min.css" >
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="../GpsToll_PhpInterFace/Shared/js/bootstrap.min.js" ></script>
+<script src="../Phpinterface_Toll/Shared/js/bootstrap.min.js" ></script>
 </head>
 <body>
 <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $_hn=$_POST["txthn"];
     $_en=$_POST["txten"];
 
-    require '../GpsToll_PhpInterFace/Shared/classTollPlaza.php';
+    require '../Phpinterface_Toll/Shared/classTollPlaza.php';
     $conn=new toll_plaza;
     $result=$conn->insert($_Tname,$_lat,$_long,$_hn,$_en);
     

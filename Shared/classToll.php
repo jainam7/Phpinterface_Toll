@@ -22,10 +22,11 @@ class toll
         toll::disconnect();
     }
   
-  public function insert($_Tname,$_lat,$_long,$_hn,$_en)
+  public function insert($_tpid,$_tw,$_fw,$_sw,$_bus,$_truck,$_hcm,$_twr,$_fwr,$_swr,$_busr,$_truckr,$_hcmr)
        {
            $cnn=toll::connect();
-           $q="insert into toll values ('". null ."','". $_Tname ."','". $_lat ."','". $_long ."','". $_hn ."','". $_en ."')";
+           $q="insert into toll values ('". null ."','". $_tpid ."','". $_tw ."','". $_fw ."','". $_sw ."','". $_bus ."','". $_truck  ."','". $_hcm ."','". $_twr ."','". $_fwr ."','". $_swr ."','". $_busr ."','". $_truckr  ."','". $_hcmr ."')";
+           echo $q;
            $result=$cnn->query($q);
            return $result;
            toll::disconnect();
