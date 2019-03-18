@@ -23,13 +23,13 @@
                                             <?php
                                             require '../Phpinterface_Toll/Shared/classTollPlaza.php';
                                             $conn=new toll_plaza;
-                                            $result=$conn-> select_id();
+                                            $result=$conn-> select_all();
                                              if ($result->num_rows > 0)
                                              {
                                                  while($row = $result->fetch_assoc())
                                                  {
                                                      $_tid=$row["toll_plaza_id"];
-                                                   echo  '<option>' . $row["toll_plaza_id"] . '</option>' . "\n";
+                                                     echo  '<option value="'.$row["toll_plaza_id"].'">' . $row["toll_name"] . '</option>' . "\n";
                                                  }
                                              
                                                  echo '</select>';
